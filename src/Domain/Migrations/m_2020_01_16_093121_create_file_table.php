@@ -15,7 +15,7 @@ class m_2020_01_16_093121_create_file_table extends BaseCreateTableMigration
     public function tableSchema()
     {
         return function (Blueprint $table) {
-            $table->integer('id')->autoIncrement();
+            $table->integer('id')->autoIncrement()->comment('Идентификатор');
             $table->integer('service_id')->comment('Сервис');
             $table->integer('entity_id')->comment('ID внешней сущности');
             $table->integer('author_id')->comment('Автор');
