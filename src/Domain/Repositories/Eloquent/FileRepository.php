@@ -2,8 +2,9 @@
 
 namespace PhpBundle\Storage\Domain\Repositories\Eloquent;
 
-use PhpLab\Eloquent\Db\Base\BaseEloquentCrudRepository;
+use PhpBundle\Storage\Domain\Entities\FileEntity;
 use PhpBundle\Storage\Domain\Interfaces\Repositories\FileRepositoryInterface;
+use PhpLab\Eloquent\Db\Base\BaseEloquentCrudRepository;
 
 class FileRepository extends BaseEloquentCrudRepository implements FileRepositoryInterface
 {
@@ -12,7 +13,6 @@ class FileRepository extends BaseEloquentCrudRepository implements FileRepositor
 
     public function getEntityClass(): string
     {
-        return 'PhpLab\\Sandbox\\Storage\\Domain\\Entities\\FileEntity';
+        return FileEntity::class;
     }
 }
-
